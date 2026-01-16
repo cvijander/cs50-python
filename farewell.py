@@ -1,0 +1,1 @@
+print("Farewell, my friend")

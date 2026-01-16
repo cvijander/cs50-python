@@ -1,0 +1,245 @@
+lekcija 1 varijable 
+
+10 minuta predjeno 
+
+
+u terminalu kucamo 
+code hello.py - da napravi novi fajl sa tim nazivom 
+
+python hello.py - da pozove taj fajl i da ispise sta god da ima u njemu.
+
+funkcija   input() da privati ono sto kucamo u terminalu 
+name = input("Hello dock ,what is our name? ")
+
+dakle ovde  vrednost inputa stavlja  u promenljivu name
+
+komentare  pisemo sa  #
+
+# ovo je single linija komentara
+
+"""
+ovo je multi line komentar 
+"""
+
+mozemo da spojimo pa da bude 
+print("hello, " + name)
+
+ili vec noviji pristup 
+print("hello,", name)   
+ dakle ovde dodajemo zarez i nakon toga sledeci argument
+
+
+docs.python.org  je cela dokumentacija 
+
+str u pajtonu je string u c#
+
+
+print(*objects , sep=' ', end="\n") 
+dakle u ovoj funkciji *objects znaci da moze da ima brdo objakdata i nista
+sep=' ' jeoznaka separatora izmedju objekata i to je jedno prazni mesto, a moze da bude bilosta st mi stavimo
+i end="\n" znacava da na kraj stavke idemo  u novi red, a ako promenimo,onda necemo da odemo u novi red 
+
+
+ako hocemo da dodamo quote tj teks pod navodnicima moze na dva nacina
+jedan je da koristimo 'nekitestk " ovo"' 
+
+ili vec  "neki teskt \"ovo je to\""
+
+
+mozemo umesto konkatenacije da koristimo {name}
+ali kao u C# gde koristimo $ znam pre zagrade , to ide ovde na mestu prvog  karaktera 
+
+dakle bice print(f"Neki tekst {name}") 
+
+
+str  - stringovi 
+
+ako imamo vise white spaceva, tj ako imamo prazna polja mozemo to da formatiramo 
+
+kao sto je kod C# format() ili vec trim()
+
+kod pajtona to je name = name.strip() 
+
+
+ako hocemo da kapitalizujemo tj da imamo prvo slovo veliko 
+onda imamo sledecu funkciju 
+
+name = name.capitalize() 
+
+
+ako zelimo da imamo i prvo veliko slovo za ime i za prezime onda koristimo funkciju title()
+
+name = name.title()  
+
+
+
+Mozemo da uradimo i spajanje funkcija 
+
+name = name.strip().title()   
+
+tako sto ce prvo da stripuje pa da stavi velika slova i prosledi vrednost na name 
+
+a mozemo i umesto svega ovoga da ovu funckiju gurnemo gore gde se prvi put pojavljuje vrednosti name i da na njemu to bude 
+
+name = input("What is your name ? ").strip().title()
+
+
+splitovanje imena na dva stringa
+mozemo da podelimo postojeci string na dva string, cime ime i prezime delimo na 
+prvi i drugi preko funkcije split(" ") gde kazemo da koristimo  " " kao faktor za razdvajanje  
+
+first, last = name.split(" ")
+
+
+int - intiger celi brojevi i negativni i pozitivni 
+
+u terminalu kucamo samo python i dobijamo da se terminal pretvori u interactvi mode 
+
+tj dobijamo >>>  
+ i tu sta god da ukucamo odmah se vrati, dakle ako ukucamo brojeve sa nekom funckiom to se pokaze, kao i neka funkcija sa stringom, dakle ne trebe mu 
+da postoji funkcija od gore 
+
+kad ukucamo exit() - onda se vracamo u prvobitni mod
+
+
+
+kod integera, dakle preko inputa uvek dobijamo neki tekst, tako da je neophodno da taj tekst konvertujemo u int 
+
+tako da kod pajtona to se radi na sledeci nacin 
+
+x = input("Whati is x ? ")
+y = input("What is y? ")
+
+z = int(x) + int(y)
+
+print(z)
+
+i sada imamo zbir vidljiv 
+
+
+
+nestovanje funkcija , tj ugnjezdavanje funkcija 
+
+u pajtonu mozemo da uradimo ugnjezdavanje funckija, tako sto jednu funckiju ubacimo u drugu, pa je onda rezultat te unutrasnje 
+ustvari argument za ovu spoljnu 
+
+# Nesting functions
+x = int (input("What's x? "))
+y = int(input("What's y? "))
+
+print (x + y)
+
+i ovim smo jednu funkciju podigli gore i spojili da radi ovo sa int, a onda sada ovo sa printom moze da radi samo sabiranje 
+
+
+1:14 - floats 
+float dakle imamo brojeve sa pokretnim zarezom 
+
+i onda ako stavimo 
+x = float(input("What is x? ")) 
+
+ovde dobijamo vrednost float kao broj 1.2 itd 
+
+metoda round() - zaokruzuje vrednost floata na blizi broj ili na veci ili na manji
+
+z = round(x + y)
+
+
+ako zelimo da formatiramo ovaj string tj ovaj rezultat da se lepo vidi koji je broj mozemo da koristimo 
+
+print(f"{z:,}")
+
+i onda ce kao rezultat biti broj z ali sa zarezom dakle npr 1,000 - kao hiljada
+
+
+int u pajtonu nema granice kao sto ga ima u C# 
+
+dok postoji preciznost koliko float ima decimala, tj preciznosti 
+
+ako stavimo round u okviru floata, onda zaokruzujemo na koliko zelimo decimala 
+
+z = round(x / y, 2)
+ - dakle sad nam je resenje na 0.67 dakle samo na 2 decimale 
+
+z = round(x / y, 5)
+dok je ovde na 5 decimala nakon 0   0.66667
+
+drugi nacin je da u okviru printa koristimo funkciju print(f"{z:.5f}")  to je funkcija formatiranja 
+koja sada kaze nakon. hocu 5 karaktera 
+
+print(f"{z:.2f}") ili vec ovde ako zelimo 2 karaktera 
+
+
+funkcije 
+za kreiranje funkcije koristimo def - kao skracenica define 
+
+def hello():
+ - i sada pajton tretira da je sve funkcija sto je ispod ove zagrade ali da je uvuceno 
+
+sa ovim smo definisali funkciju koja prima paramtetai i stavlja ga u funkciju 
+def hello(to):
+    print("Hello,",to) 
+
+
+name = input("What's your name? ")       
+hello(name)
+
+a mozemo i da dodamo opcioni parametar, dakle ako nestigne da se uneze vrednost, da ona po difoltu pokaze nesto 
+
+def hello(to="world"):
+    print("Hello,",to) 
+
+hello()
+name = input("What's your name? ")       
+hello(name)
+
+i sad pozivano hello() - bez parametra i 
+hello(sa unetim parametrom)
+
+
+kod pajtona moramo da prvo definisemo funckijeu pre poziva inace nece raditi 
+
+postoji i laksi nacin odnosno da se funcije definisu ali tako da imaju naziv i prioritet 
+
+def main():
+    name = input("What is your name? ")
+    hello(name)
+
+
+def hello(to):
+    print("hello",to) 
+
+ali sad smo podelili i definisali funcije, ali on nezna koja je glavna i koju treba da pozove 
+
+sa ubacivanjem tj pozivanjem maina
+
+def main():
+    name = input("What is your name? ")
+    hello(name)
+
+
+def hello(to):
+    print("hello",to) 
+
+
+main()  
+
+sad znamo da on poziva main i posle odatle ide dalje tok
+
+ovde takodje postoji scope, tako da ono sto je definisano u okviru neke funkcije, postoji samo oko te funkcije 
+
+return funcija kada rezultat vraca nesto 
+
+def main():
+    x = int(input("What' is x? "))
+    print("x squared is " , squar(x))
+
+
+def squar(n):
+     return n * n   
+
+
+main()
+
+i ovde se kao rezultat vraca neki broj kao resenje 
+
