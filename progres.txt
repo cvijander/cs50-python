@@ -243,3 +243,8 @@ main()
 
 i ovde se kao rezultat vraca neki broj kao resenje 
 
+
+return dunkcija ,sluzi da neki vrednost koju izracunava da mozemoda ja vratimo nazad korisniku 
+i return mora da bude na kraju funckcije jer nakon njega nema vise izracunavanja
+
+
