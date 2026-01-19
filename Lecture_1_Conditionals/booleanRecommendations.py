@@ -1,5 +1,9 @@
 def main():
     difficulty = input ("Difficult or Casual? ")
+    if not (difficulty == "Difficult" or difficulty == "Casual"):
+        ...
+
+
     players = input("Multiplayer or Single-player? ")
 
     if difficulty == "Difficult":
@@ -19,7 +23,7 @@ def main():
         else:
             print("Enter a valid number of players")              
 
-            
+
     else:
             print("Enter  a valid difficulty")
 
