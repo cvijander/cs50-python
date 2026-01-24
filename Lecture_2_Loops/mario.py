@@ -11,6 +11,7 @@ for _ in range(3):
 
     """
 
+"""
 def main():
     print_Column(3)
 
@@ -22,6 +23,19 @@ def print_Column(height):
         print("#")
 
 
+
+
+main()
+
+"""
+
+def main():
+    printRow(4)
+
+
+
+def printRow(width):
+    print("?" * width)
 
 
 main()
