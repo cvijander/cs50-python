@@ -10,3 +10,26 @@ students = [
 
 for student in students:
     print(student["name"], student["house"], student["patronus"], sep=", ")
+
+
+
+print(students[0])
+print(students[1])
+print(students[2])
+print(students[3])
+
+
+
+print(students[0]["name"])
+print(students[1]["house"])
+print(students[2]["patronus"])
+
+
+print(students[0]["name"],["house"],["patronus"])
+
+
+print(students[0]["name"], students[0]["house"],students[0]["patronus"])
+
+
+for student in students:
+    print(student["name"])
