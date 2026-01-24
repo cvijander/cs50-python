@@ -32,3 +32,20 @@ def print_Square2(size):
 
 # ili jos podeliti na vise grupa tj metoda i onda jedna metoda pravi redove a druge kolone 
 
+
+def print_Squre3(size):
+    for i in range(size):
+        print_row(size)
+
+
+def print_row(width):
+    print("#" * width)
+
+
+
+# drugfi nacin tj nacin koriscenja for petlje za dobijanje redova plus dodatak print za novi red 
+
+def print_row1(width1):
+     for _ in range(width1):
+          print("#", end="")
+     print()     
