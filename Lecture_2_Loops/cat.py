@@ -13,4 +13,5 @@ while i != 0:
 j = 0 
 while j < 3:
     print("Wof")
-    j = j +1
+    #j = j +1
+    j += 1
