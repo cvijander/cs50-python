@@ -10,6 +10,12 @@ def main():
          guess = input("Guess a word: ")
 
 
+        # TODO:  check is guess in dictionary 
+         if guess in WORDS.keys():
+            points = WORDS.pop(guess)
+            print(f"Good job. You scored {points} points.")
+
+
     print("That's the game!")     
 
 
