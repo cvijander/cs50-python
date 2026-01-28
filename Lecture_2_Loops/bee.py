@@ -1,4 +1,5 @@
 WORDS = {"PAIR":4, "HAIR": 4, "CHAIR":5}
+UserWORDS = {"A", "I", "P", "C", "R", "H", "G"}
 
 
 def main():
@@ -8,11 +9,21 @@ def main():
     while len(WORDS) > 0 :
          print(f"{len(WORDS)} words left! ")
          guess = input("Guess a word: ")
+         filteredGuess = guess.strip().upper()
 
+         if UserWORDS.keys() in filteredGuess(): 
+             filteredGuess = UserWORDS.pop(UserWORDS.keys())
 
         # TODO:  check is guess in dictionary 
-         if guess in WORDS.keys():
-            points = WORDS.pop(guess)
+         if filteredGuess in WORDS.keys():
+            points = WORDS.pop(filteredGuess)
+            # sporiji ali mozda logicniji nacin za C# jeste da prvo poene prebacimo 
+            # points = WORDS[filteredGuess]
+            # drugi deo kad smo nasli poene da obrisemo taj kljuc 
+            # del WORDS[filteredGuess]
+
+            # dakle to sve menja funkcija points = WORDS.pop(filteredGuess)
+
             print(f"Good job. You scored {points} points.")
 
 
