@@ -1,5 +1,5 @@
-WORDS = {"PAIR":4, "HAIR": 4, "CHAIR":5}
-UserWORDS = {"A", "I", "P", "C", "R", "H", "G"}
+WORDS = {"PAIR":4, "HAIR": 4, "CHAIR":5 , "GRAPHIC": 7}
+#UserWORDS = {"A", "I", "P", "C", "R", "H", "G"}
 
 
 def main():
@@ -11,10 +11,13 @@ def main():
          guess = input("Guess a word: ")
          filteredGuess = guess.strip().upper()
 
-         if UserWORDS.keys() in filteredGuess(): 
-             filteredGuess = UserWORDS.pop(UserWORDS.keys())
+        # if UserWORDS.keys() in filteredGuess(): 
+         #    filteredGuess = UserWORDS.pop(UserWORDS.keys())
 
         # TODO:  check is guess in dictionary 
+         if filteredGuess == "GRAPHIC":
+             WORDS.clear()
+             print("You have won!")
          if filteredGuess in WORDS.keys():
             points = WORDS.pop(filteredGuess)
             # sporiji ali mozda logicniji nacin za C# jeste da prvo poene prebacimo 
